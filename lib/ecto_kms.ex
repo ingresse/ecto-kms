@@ -24,7 +24,7 @@ defmodule Ecto.Kms do
       {:ok, encrypted["CiphertextBlob"]}
 
     else
-      {:error, _} -> {:error, :credit_card_encryption_failed}
+      {:error, _} -> {:error, :kms_encryption_failed}
     end
   end
   def dump(_), do: :error
@@ -38,7 +38,7 @@ defmodule Ecto.Kms do
       {:ok, decrypted}
 
     else
-      {:error, _} -> {:error, :credit_card_decryption_failed}
+      {:error, _} -> {:error, :kms_decryption_failed}
     end
   end
 
