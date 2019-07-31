@@ -3,6 +3,9 @@ use Mix.Config
 #########################
 # AWS
 #########################
+config :ecto_kms, :encrypt_key,
+  id: ""
+
 config :ex_aws, :kms,
   scheme: "http://",
   host: "local_kms",
