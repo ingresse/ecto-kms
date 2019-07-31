@@ -56,7 +56,7 @@ defmodule Ecto.Kms.MixProject do
 
   defp deps do
     [
-      {:ecto, "~> 3.1"},
+      {:ecto, "~> 2.2.11"},
       {:ex_aws, "~> 2.0"},
       {:ex_aws_kms, "~> 2.0"},
       {:poison, "~> 3.1"},
