@@ -5,7 +5,6 @@ defmodule Ecto.Kms.MixProject do
     [
       app: :ecto_kms,
       version: "1.0.0",
-      elixir: "~> 1.7.3",
       start_permanent: Mix.env() == :prod,
       build_embedded: Mix.env() == :prod,
       deps: deps(),
@@ -27,7 +26,6 @@ defmodule Ecto.Kms.MixProject do
     [
       files: [
         "lib",
-        "priv",
         ".formatter.exs",
         "mix.exs",
         "README*",
