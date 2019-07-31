@@ -6,7 +6,7 @@ defmodule Ecto.Kms do
   """
   alias ExAws.KMS
 
-  @key_id Application.get_env(:ex_kms, :encrypt_key)[:id]
+  @key_id Application.get_env(:ecto_kms, :encrypt_key)[:id]
   @behaviour Ecto.Type
 
   @doc false
