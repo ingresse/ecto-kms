@@ -58,7 +58,7 @@ defmodule Ecto.Kms.MixProject do
     [
       {:ecto, "~> 3.1"},
       {:ex_aws, "~> 2.0"},
-      {:ex_aws_kms, "~> 2.0"}
+      {:ex_aws_kms, "~> 2.0"},
       {:poison, "~> 3.1"},
       {:ex_doc, "~> 0.20", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10.1", only: :test},
