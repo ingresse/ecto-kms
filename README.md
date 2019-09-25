@@ -7,7 +7,7 @@ The package can be installed by adding `ecto_kms` to your list of dependencies i
 ```elixir
 def deps do
   [
-    {:ecto_kms, "~> 1.0.0"}
+    {:ecto_kms, "~> 1.0.1"}
   ]
 end
 ```
