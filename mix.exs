@@ -4,7 +4,7 @@ defmodule Ecto.Kms.MixProject do
   def project do
     [
       app: :ecto_kms,
-      version: "1.0.0",
+      version: "1.0.1",
       start_permanent: Mix.env() == :prod,
       build_embedded: Mix.env() == :prod,
       deps: deps(),

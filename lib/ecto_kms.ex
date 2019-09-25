@@ -6,7 +6,6 @@ defmodule Ecto.Kms do
   """
   alias ExAws.KMS
 
-  @key_id Application.get_env(:ecto_kms, :encrypt_key)[:id]
   @behaviour Ecto.Type
 
   @doc false
@@ -45,7 +44,7 @@ defmodule Ecto.Kms do
   defp encrypt(data) do
     data
     |> Base.encode64()
-    |> (&KMS.encrypt(&2, &1)).(@key_id)
+    |> (&KMS.encrypt(&2, &1)).(encrypt_key())
     |> ExAws.request()
   end
 
@@ -58,4 +57,8 @@ defmodule Ecto.Kms do
 
   defp decode({:error, _}), do: {:error, %{}}
   defp decode({:ok, body}), do: Base.decode64(body["Plaintext"])
+
+  defp encrypt_key do
+    Application.get_env(:ecto_kms, :encrypt_key)[:id]
+  end
 end
